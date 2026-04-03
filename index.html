@@ -1,1 +1,25 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+<body>
+<script>
+(function () {
+  var WEB_URL    = "https://youtu.be/-cu27141I6I";
+  var IOS_SCHEME = "youtube://youtu.be/-cu27141I6I";
+  var AND_INTENT = "intent://youtu.be/-cu27141I6I"
+    + "#Intent;scheme=https;"
+    + "package=com.google.android.youtube;"
+    + "S.browser_fallback_url=" + encodeURIComponent(WEB_URL) + ";end";
+  var ua = navigator.userAgent;
+  if (/Android/i.test(ua)) {
+    silentOpen(AND_INTENT);
+  } else if (/iPad|iPhone|iPod/i.test(ua)) {
+    location.href = WEB_URL;
+  }
+}());
+</script>
+</body>
+</html>
