@@ -17,17 +17,17 @@
   var ua = navigator.userAgent;
   var start = Date.now();
   function fallback() {
-    if (Date.now() - start < 600) {
+    if (Date.now() - start < 1200) {
       window.location.href = WEB_URL;
     }
   }
   if (/Android/i.test(ua)) {
     window.location.href = ANDROID_INTENT;
-    setTimeout(fallback, 600);
+    setTimeout(fallback, 1200);
   } 
   else if (/iPhone|iPad|iPod/i.test(ua)) {
     window.location.href = IOS_APP;
-    setTimeout(fallback, 600);
+    setTimeout(fallback, 1200);
   } 
   else {
     window.location.href = WEB_URL;
