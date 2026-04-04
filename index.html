@@ -17,9 +17,7 @@
   var ua = navigator.userAgent;
   var start = Date.now();
   function fallback() {
-    if (Date.now() - start < 1200) {
-      window.location.href = WEB_URL;
-    }
+    window.location.href = WEB_URL;
   }
   if (/Android/i.test(ua)) {
     window.location.href = ANDROID_INTENT;
