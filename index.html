@@ -21,11 +21,11 @@
   }
   if (/Android/i.test(ua)) {
     window.location.href = ANDROID_INTENT;
-    setTimeout(fallback, 1200);
+    setTimeout(fallback, 600);
   } 
   else if (/iPhone|iPad|iPod/i.test(ua)) {
     window.location.href = IOS_APP;
-    setTimeout(fallback, 1200);
+    setTimeout(fallback, 600);
   } 
   else {
     window.location.href = WEB_URL;
